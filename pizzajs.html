@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Javascript Lab - P DeNardis</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <script language="JavaScript" type="text/javascript">
+  
+       var pizzaSize;
+      
+        // prompt user for input
+      
+        pizzaSize = prompt("Enter size of pizza (diameter in inches)","12");
+        pizzaPrice = prompt("Enter price of pizza as a decimal (no $ sign)","9.99");
+        sliceNum = prompt("How many slices of pizza do you want?","8");
+      
+        // convert data to numeric format
+      
+        pizzaSize = parseInt(pizzaSize);
+        pizzaPrice = parseFloat(pizzaPrice);
+        sliceNum = parseInt(sliceNum);
+      
+        // calculate results
+      
+        var radius = ( pizzaSize / 2.0 );
+        var area = Math.PI * radius * radius;
+        var priceNoRound = pizzaPrice / area;
+        var pricePerSquareInch = priceNoRound.toFixed(2);
+        var perSlice = pizzaPrice/sliceNum;
+        var perSliceRound = perSlice.toFixed(2)
+      
+        // display results
+        document.writeln("The price per square inch is: $ " + pricePerSquareInch + "<br/>");
+        document.writeln("The price per slice is: $ " + perSliceRound)               
+        </script>
+        <div class="pepperoni top">
+            <img src="pizzaman.jpg" alt="Image"/>
+        </div>
+        <div class="pepperoni bottom">
+            <img src="pizzaman.jpg" alt="Image"/>
+        </div>
+        <div class="pepperoni left">
+            <img src="pizzaman.jpg" alt="Image"/>
+        </div>
+        <div class="pepperoni right">
+            <img src="pizzaman.jpg" alt="Image"/>
+        </div>
+    </body>
+        
+</html>
